@@ -1,46 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Come Bien · Flip Calendar</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <title>Calendario Come Bien</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="wrap">
-    <section class="card">
-      <header class="brand">
-        <div class="logoMark"></div>
-        <div class="brandText">
-          <div class="brandName">come bien</div>
-          <div class="brandSub">calendario</div>
-        </div>
-      </header>
 
-      <div class="flipRow">
-        <div class="flipBlock">
-          <div class="label">DÍA</div>
-          <div class="flip" id="flipDay">
-            <div class="top" id="dayTop">01</div>
-            <div class="bottom" id="dayBottom">01</div>
-            <div class="topFlip" id="dayTopFlip">01</div>
-            <div class="bottomFlip" id="dayBottomFlip">01</div>
-          </div>
-        </div>
+<div class="flip-wrapper">
+  <div class="flip-card" id="day">
+    <div class="top">00</div>
+    <div class="bottom">00</div>
+  </div>
 
-        <div class="flipBlock">
-          <div class="label">MES</div>
-          <div class="flip flipMonth" id="flipMonth">
-            <div class="top" id="monthTop">ENERO</div>
-            <div class="bottom" id="monthBottom">ENERO</div>
-            <div class="topFlip" id="monthTopFlip">ENERO</div>
-            <div class="bottomFlip" id="monthBottomFlip">ENERO</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <div class="flip-card" id="month">
+    <div class="top">MES</div>
+    <div class="bottom">MES</div>
+  </div>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
