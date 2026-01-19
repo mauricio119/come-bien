@@ -5,10 +5,10 @@ body {
   justify-content: center;
   align-items: center;
   background: #FFF2D6;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: Inter, system-ui, sans-serif;
 }
 
-/* CONTENEDOR HORIZONTAL */
+/* CONTENEDOR */
 .flip-wrapper {
   display: flex;
   gap: 24px;
@@ -16,20 +16,20 @@ body {
 
 /* TARJETA */
 .flip-card {
+  position: relative;
   width: 180px;
   height: 220px;
   background: #155638;
   border-radius: 22px;
-  overflow: hidden;
   box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }
 
-/* MITADES */
+/* CAPAS SUPERPUESTAS */
 .flip-card .top,
 .flip-card .bottom {
-  flex: 1;
+  position: absolute;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@ body {
   font-weight: 700;
 }
 
-/* TEXTO GRANDE (DÍA) */
+/* TEXTO DÍA */
 #day .top,
 #day .bottom {
   font-size: 96px;
@@ -50,7 +50,14 @@ body {
   letter-spacing: 4px;
 }
 
-/* LÍNEA CENTRAL (efecto flip) */
-.flip-card .top {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+/* LÍNEA CENTRAL */
+.flip-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-0.5px);
 }
