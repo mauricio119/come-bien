@@ -1,6 +1,11 @@
-const meses = [
+/*const meses = [
   "ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO",
   "JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE"
+];
+*/
+const meses = [
+  "ENE","FEB","MAR","ABR","MAY","JUN",
+  "JUL","AGO","SEP","OCT","NOV","DIC"
 ];
 
 function updateDate() {
