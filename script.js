@@ -10,9 +10,14 @@ const meses = [
 
 function updateDate() {
   const now = new Date();
-  document.querySelector("#day .display").textContent = now.getDate();
-  document.querySelector("#month .display").textContent = meses[now.getMonth()];
+
+  document.querySelector("#day .display").textContent =
+    String(now.getDate()).padStart(2, "0");
+
+  document.querySelector("#month .display").textContent =
+    meses[now.getMonth()];
 }
+
 
 updateDate();
 setInterval(updateDate, 60000);
